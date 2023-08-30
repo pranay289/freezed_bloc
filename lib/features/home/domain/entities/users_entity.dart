@@ -1,5 +1,5 @@
 
-typedef UsersList = List<UserEntity>;
+// typedef UsersList = List<UserEntity>;
 
 class UserEntity {
   final int id;

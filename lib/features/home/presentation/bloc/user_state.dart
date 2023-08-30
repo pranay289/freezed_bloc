@@ -7,6 +7,6 @@ class UserState with _$UserState {
   const factory UserState.initial() = UserInitialState;
   const factory UserState.loading() = UserLoadingState;
   const factory UserState.error(String message) = UserErrorState;
-  const factory UserState.loadedState({required UsersList usersList}) =
+  const factory UserState.loadedState({required  List<UserEntity> usersList}) =
       UserLoadedState;
 }
