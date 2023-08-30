@@ -5,7 +5,7 @@ import 'package:sample_bloc/features/home/domain/entities/users_entity.dart';
 import 'package:sample_bloc/features/home/domain/repository/home_repository.dart';
 
 class HomeUseCase {
-  Future<Either<Failure, UsersList>> getSampleData() async {
+  Future<Either<Failure,  List<UserEntity>>> getSampleData() async {
     final response = await serviceLocater<HomeRepository>().getSampleData();
     return response;
   }

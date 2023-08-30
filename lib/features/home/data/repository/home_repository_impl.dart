@@ -8,7 +8,7 @@ import 'package:sample_bloc/features/home/domain/repository/home_repository.dart
 
 class HomeRepositoryImpl extends HomeRepository {
   @override
-  Future<Either<Failure, UsersList>> getSampleData() {
+  Future<Either<Failure,  List<UserEntity>>> getSampleData() {
    return serviceLocater<HomeDataSource>().getSampleData();
   }
   

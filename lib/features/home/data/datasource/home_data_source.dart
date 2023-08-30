@@ -6,17 +6,17 @@ import 'package:sample_bloc/features/home/data/models/home_model.dart';
 import 'package:sample_bloc/features/home/domain/entities/users_entity.dart';
 
 abstract class HomeDataSource {
-  Future<Either<Failure, UsersList>> getSampleData();
+  Future<Either<Failure,  List<UserEntity>>> getSampleData();
 }
 
 class HomeDataSourceImpl extends HomeDataSource {
   @override
-  Future<Either<Failure, UsersList>> getSampleData() async {
+  Future<Either<Failure, List<UserEntity>>> getSampleData() async {
     try {
       final request = serviceLocater<Request>();
       final result = await request.get("/posts");
       if (result.statusCode == 200) {
-        UsersList usersList = [];
+         List<UserEntity> usersList = [];
         for (var data in result.data) {
           usersList.add(Users.fromJson(data).mapToDomain());
         }

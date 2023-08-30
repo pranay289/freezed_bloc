@@ -39,7 +39,7 @@ void main() {
       verify(userMock.getSampleData()).called(1);
       final result = userMock.getSampleData();
 
-      expectLater(result, completion(const Right(<Users>[])));
+      expectLater(result, completion(const Right(<UserEntity>[])));
 
 
     });
