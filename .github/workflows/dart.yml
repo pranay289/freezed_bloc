@@ -74,7 +74,7 @@ jobs:
       - run: flutter pub get 
       - name: Gitub curd
         run: |
-          echo "${{secrets.TOKEN}}"
+          echo "${{secrets.GITHUB_TOKEN}}"
 
       # - name: Creating build
       #   run: flutter build apk --debug --split-per-abi --flavor dev -t lib/app/flavors/app_dev.dart
