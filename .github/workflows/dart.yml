@@ -74,11 +74,11 @@ jobs:
       - run: flutter pub get 
       - name: Creating build
         run: flutter build apk --debug --split-per-abi --flavor dev -t lib/app/flavors/app_dev.dart
-      - uses: actions/create-release@v1
+      - uses: ncipollo/release-action@v1
         with: 
             artifacts: "build/app/outputs/apk/debug/*"
-            tag: v1.0.${{github.run_number}}
-            token: ${{secrets.TOKEN}}
+            token: ${{ secrets.TOKEN }}
+            tag: v1.0.${{github.run_number}}          
 
       
     
