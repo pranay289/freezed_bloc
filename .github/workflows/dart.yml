@@ -72,16 +72,13 @@ jobs:
         with:
           flutter-version: '3.7.10'
       - run: flutter pub get 
-      - name: Gitub curd
-        run: |
-          echo "${{secrets.GITHUB_TOKEN}}"
+      - name: Creating build
+        run: flutter build apk --debug --split-per-abi --flavor dev -t lib/app/flavors/app_dev.dart
+      - uses: actions/create-release@v1
+        with: 
+            artifacts: "build/app/outputs/apk/debug/*"
+            tag: v1.0.${{github.run_number}}
+            token: ${{secrets.TOKEN}}
 
-      # - name: Creating build
-      #   run: flutter build apk --debug --split-per-abi --flavor dev -t lib/app/flavors/app_dev.dart
-      # - uses: actions/create-release@v1
-      #   with: 
-      #       artifacts: "build/app/outputs/apk/debug/*"
-      #       tag: v1.0.${{github.run_number}}
-      #       GITHUB_TOKEN: ${{secrets.TOKEN}}
       
     
