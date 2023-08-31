@@ -10,6 +10,7 @@ class MySecondScreen extends StatelessWidget {
   Future<bool> showToast(String message) async {
     try {
       final result = await platform.invokeMethod("showToast", message);
+      print(result);
       return result;
     }  catch (_) {
       return false;
@@ -28,7 +29,7 @@ class MySecondScreen extends StatelessWidget {
           TextButton(
             key: const Key("tap"),
             onPressed: () {
-              context.goNamed("second");
+              // context.goNamed("second");
               showToast("Hello flutter channel");
             },
             child: const Text("data"),
