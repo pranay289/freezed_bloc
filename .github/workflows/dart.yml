@@ -75,6 +75,7 @@ jobs:
       - name: Creating build
         run: flutter build apk --debug --split-per-abi --flavor dev -t lib/app/flavors/app_dev.dart
       - uses: ncipollo/release-action@v1
+      
         with: 
             artifacts: "build/app/outputs/apk/debug/*"
             token: ${{ secrets.TOKEN }}
