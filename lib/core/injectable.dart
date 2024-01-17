@@ -1,4 +1,6 @@
+
 import 'package:get_it/get_it.dart';
+import 'package:injectable/injectable.dart';
 import 'package:sample_bloc/core/request.dart';
 import 'package:sample_bloc/features/home/data/datasource/home_data_source.dart';
 import 'package:sample_bloc/features/home/data/repository/home_repository_impl.dart';
@@ -6,17 +8,13 @@ import 'package:sample_bloc/features/home/domain/repository/home_repository.dart
 import 'package:sample_bloc/features/home/domain/use_cases/home_use_case.dart';
 import 'package:sample_bloc/features/home/presentation/bloc/user_bloc.dart';
 
-final serviceLocater = GetIt.instance;
+import 'injectable.config.dart';
 
-Future<void> setUpServiceLocater() async {
-  // Data sources
-  serviceLocater.registerFactory<HomeDataSource>(() => HomeDataSourceImpl());
-  // Repository implementation
-  serviceLocater.registerFactory<HomeRepository>(() => HomeRepositoryImpl());
-  // use cases
-  serviceLocater.registerFactory<HomeUseCase>(() => HomeUseCase());
-  // singleton
-  serviceLocater.registerSingleton(Request());
+final GetIt getIt = GetIt.instance;
 
-  serviceLocater.registerSingleton(UserBloc());
-}
+@InjectableInit(
+  initializerName: r'$initGetIt', // default
+  preferRelativeImports: true, // default
+  asExtension: false, // default
+)
+void configureInjection(String? environement)=> $initGetIt(getIt,environment: environement);

@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:sample_bloc/app/flavors/app_dev.dart';
-import 'package:sample_bloc/core/service_locator.dart';
 import 'package:sample_bloc/utils/enums.dart';
 
 class AppConfig {
@@ -28,8 +26,6 @@ class AppConfig {
   Future<void> initializeApp(Widget app) async {
     WidgetsFlutterBinding.ensureInitialized();
     // await Future.delayed(const Duration(seconds: 5));
-    // To setup service locater service
-    await setUpServiceLocater();
     return startApp(app);
   }
 

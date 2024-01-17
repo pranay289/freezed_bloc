@@ -1,10 +1,14 @@
+import 'dart:async';
+import 'dart:isolate';
+
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:go_router/go_router.dart';
 // import 'dart:ui' as ui;
 
 class MySecondScreen extends StatelessWidget {
-  const MySecondScreen({super.key});
+   MySecondScreen({super.key});
   static const platform = MethodChannel("MY_CHANNEL");
 
   Future<bool> showToast(String message) async {
@@ -16,21 +20,42 @@ class MySecondScreen extends StatelessWidget {
       return false;
     }
   }
+ Future<String> myFuture()async{
+    final complete = Completer<String>();
+    try{
+   await Future.delayed(const Duration(seconds: 5));
+      complete.complete("Completed");
+    }catch(e){
+      complete.completeError("error");
+    }
 
+   return complete.future;
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+           CircularProgressIndicator(),
           const Center(
             child: Text("Second"),
           ),
           TextButton(
             key: const Key("tap"),
-            onPressed: () {
+            onPressed: () async{
+             
               // context.goNamed("second");
               showToast("Hello flutter channel");
+            //  final result = await compute(startComplexTask, 10000000000);
+            //  print(result);
+             print(await myFuture());
+
+            //  Isolate.run(() =>startComplexTask(10000000000));
+            // compute(startComplexTask(port.sendPort),"sdasd" );
+            //  port.listen((message){  
+            //     debugPrint(message);
+            //   });
             },
             child: const Text("data"),
           )
@@ -38,6 +63,15 @@ class MySecondScreen extends StatelessWidget {
       ),
     );
   }
+}
+// SendPort sendPort
+Future<String> startComplexTask(int value)async{
+
+  for(int i=0;i<=value ;i++){
+    // To do 
+  }
+  // sendPort.send("Called after for loop");
+  return "Called after for loop";
 }
 
 // /// The body of the app. We'll use this stateful widget to manage initialization

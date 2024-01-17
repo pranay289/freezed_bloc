@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import 'package:sample_bloc/core/service_locator.dart';
+import 'package:sample_bloc/core/injectable.dart';
 import 'package:sample_bloc/features/home/presentation/bloc/user_bloc.dart';
 import 'package:sample_bloc/features/home/presentation/bloc/user_event.dart';
 import 'package:sample_bloc/features/home/presentation/bloc/user_state.dart';
@@ -21,7 +20,7 @@ class _HomeScreenState extends State<HomeScreen> {
     super.initState();
     // UserBloc().add(const UserEvent.onGetUser());
     // BlocProvider.of<UserBloc>(context).add(const UserEvent.onGetUser());
-    serviceLocater.get<UserBloc>().add(const UserEvent.onGetUser());
+    getIt.get<UserBloc>().add(const UserEvent.onGetUser());
     // context.read<UserBloc>().add(const UserEvent.onGetUser());
   } 
 
@@ -52,8 +51,10 @@ class _HomeScreenState extends State<HomeScreen> {
                     return Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
+                       
                         Text(user[index].title),
                         TextButton(onPressed: (){
+                         
                             context.goNamed("second");
                         }, child: Text("dasd"))
                       ],
@@ -97,3 +98,4 @@ class _HomeScreenState extends State<HomeScreen> {
         );
   }
 }
+

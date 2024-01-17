@@ -1,8 +1,11 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
+import 'package:injectable/injectable.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 import 'package:sample_bloc/app/Env/env.dart';
 
+
+@singleton
 class Request {
   final _dio = Dio();
 

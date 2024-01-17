@@ -36,7 +36,7 @@ class AppRoutes {
         GoRoute(
           path: '/',
           name: "first",
-          builder: (context, state) => const MySecondScreen(),
+          builder: (context, state) =>  MySecondScreen(),
           routes: [
             GoRoute(
               name: "second",

@@ -86,25 +86,25 @@ class _$UserStateCopyWithImpl<$Res, $Val extends UserState>
 }
 
 /// @nodoc
-abstract class _$$UserInitialStateCopyWith<$Res> {
-  factory _$$UserInitialStateCopyWith(
-          _$UserInitialState value, $Res Function(_$UserInitialState) then) =
-      __$$UserInitialStateCopyWithImpl<$Res>;
+abstract class _$$UserInitialStateImplCopyWith<$Res> {
+  factory _$$UserInitialStateImplCopyWith(_$UserInitialStateImpl value,
+          $Res Function(_$UserInitialStateImpl) then) =
+      __$$UserInitialStateImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$UserInitialStateCopyWithImpl<$Res>
-    extends _$UserStateCopyWithImpl<$Res, _$UserInitialState>
-    implements _$$UserInitialStateCopyWith<$Res> {
-  __$$UserInitialStateCopyWithImpl(
-      _$UserInitialState _value, $Res Function(_$UserInitialState) _then)
+class __$$UserInitialStateImplCopyWithImpl<$Res>
+    extends _$UserStateCopyWithImpl<$Res, _$UserInitialStateImpl>
+    implements _$$UserInitialStateImplCopyWith<$Res> {
+  __$$UserInitialStateImplCopyWithImpl(_$UserInitialStateImpl _value,
+      $Res Function(_$UserInitialStateImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$UserInitialState implements UserInitialState {
-  const _$UserInitialState();
+class _$UserInitialStateImpl implements UserInitialState {
+  const _$UserInitialStateImpl();
 
   @override
   String toString() {
@@ -112,9 +112,9 @@ class _$UserInitialState implements UserInitialState {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$UserInitialState);
+        (other.runtimeType == runtimeType && other is _$UserInitialStateImpl);
   }
 
   @override
@@ -196,29 +196,29 @@ class _$UserInitialState implements UserInitialState {
 }
 
 abstract class UserInitialState implements UserState {
-  const factory UserInitialState() = _$UserInitialState;
+  const factory UserInitialState() = _$UserInitialStateImpl;
 }
 
 /// @nodoc
-abstract class _$$UserLoadingStateCopyWith<$Res> {
-  factory _$$UserLoadingStateCopyWith(
-          _$UserLoadingState value, $Res Function(_$UserLoadingState) then) =
-      __$$UserLoadingStateCopyWithImpl<$Res>;
+abstract class _$$UserLoadingStateImplCopyWith<$Res> {
+  factory _$$UserLoadingStateImplCopyWith(_$UserLoadingStateImpl value,
+          $Res Function(_$UserLoadingStateImpl) then) =
+      __$$UserLoadingStateImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$UserLoadingStateCopyWithImpl<$Res>
-    extends _$UserStateCopyWithImpl<$Res, _$UserLoadingState>
-    implements _$$UserLoadingStateCopyWith<$Res> {
-  __$$UserLoadingStateCopyWithImpl(
-      _$UserLoadingState _value, $Res Function(_$UserLoadingState) _then)
+class __$$UserLoadingStateImplCopyWithImpl<$Res>
+    extends _$UserStateCopyWithImpl<$Res, _$UserLoadingStateImpl>
+    implements _$$UserLoadingStateImplCopyWith<$Res> {
+  __$$UserLoadingStateImplCopyWithImpl(_$UserLoadingStateImpl _value,
+      $Res Function(_$UserLoadingStateImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$UserLoadingState implements UserLoadingState {
-  const _$UserLoadingState();
+class _$UserLoadingStateImpl implements UserLoadingState {
+  const _$UserLoadingStateImpl();
 
   @override
   String toString() {
@@ -226,9 +226,9 @@ class _$UserLoadingState implements UserLoadingState {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$UserLoadingState);
+        (other.runtimeType == runtimeType && other is _$UserLoadingStateImpl);
   }
 
   @override
@@ -310,24 +310,24 @@ class _$UserLoadingState implements UserLoadingState {
 }
 
 abstract class UserLoadingState implements UserState {
-  const factory UserLoadingState() = _$UserLoadingState;
+  const factory UserLoadingState() = _$UserLoadingStateImpl;
 }
 
 /// @nodoc
-abstract class _$$UserErrorStateCopyWith<$Res> {
-  factory _$$UserErrorStateCopyWith(
-          _$UserErrorState value, $Res Function(_$UserErrorState) then) =
-      __$$UserErrorStateCopyWithImpl<$Res>;
+abstract class _$$UserErrorStateImplCopyWith<$Res> {
+  factory _$$UserErrorStateImplCopyWith(_$UserErrorStateImpl value,
+          $Res Function(_$UserErrorStateImpl) then) =
+      __$$UserErrorStateImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String message});
 }
 
 /// @nodoc
-class __$$UserErrorStateCopyWithImpl<$Res>
-    extends _$UserStateCopyWithImpl<$Res, _$UserErrorState>
-    implements _$$UserErrorStateCopyWith<$Res> {
-  __$$UserErrorStateCopyWithImpl(
-      _$UserErrorState _value, $Res Function(_$UserErrorState) _then)
+class __$$UserErrorStateImplCopyWithImpl<$Res>
+    extends _$UserStateCopyWithImpl<$Res, _$UserErrorStateImpl>
+    implements _$$UserErrorStateImplCopyWith<$Res> {
+  __$$UserErrorStateImplCopyWithImpl(
+      _$UserErrorStateImpl _value, $Res Function(_$UserErrorStateImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -335,7 +335,7 @@ class __$$UserErrorStateCopyWithImpl<$Res>
   $Res call({
     Object? message = null,
   }) {
-    return _then(_$UserErrorState(
+    return _then(_$UserErrorStateImpl(
       null == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
@@ -346,8 +346,8 @@ class __$$UserErrorStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$UserErrorState implements UserErrorState {
-  const _$UserErrorState(this.message);
+class _$UserErrorStateImpl implements UserErrorState {
+  const _$UserErrorStateImpl(this.message);
 
   @override
   final String message;
@@ -358,10 +358,10 @@ class _$UserErrorState implements UserErrorState {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$UserErrorState &&
+            other is _$UserErrorStateImpl &&
             (identical(other.message, message) || other.message == message));
   }
 
@@ -371,8 +371,9 @@ class _$UserErrorState implements UserErrorState {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$UserErrorStateCopyWith<_$UserErrorState> get copyWith =>
-      __$$UserErrorStateCopyWithImpl<_$UserErrorState>(this, _$identity);
+  _$$UserErrorStateImplCopyWith<_$UserErrorStateImpl> get copyWith =>
+      __$$UserErrorStateImplCopyWithImpl<_$UserErrorStateImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -450,29 +451,29 @@ class _$UserErrorState implements UserErrorState {
 }
 
 abstract class UserErrorState implements UserState {
-  const factory UserErrorState(final String message) = _$UserErrorState;
+  const factory UserErrorState(final String message) = _$UserErrorStateImpl;
 
   String get message;
   @JsonKey(ignore: true)
-  _$$UserErrorStateCopyWith<_$UserErrorState> get copyWith =>
+  _$$UserErrorStateImplCopyWith<_$UserErrorStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$UserLoadedStateCopyWith<$Res> {
-  factory _$$UserLoadedStateCopyWith(
-          _$UserLoadedState value, $Res Function(_$UserLoadedState) then) =
-      __$$UserLoadedStateCopyWithImpl<$Res>;
+abstract class _$$UserLoadedStateImplCopyWith<$Res> {
+  factory _$$UserLoadedStateImplCopyWith(_$UserLoadedStateImpl value,
+          $Res Function(_$UserLoadedStateImpl) then) =
+      __$$UserLoadedStateImplCopyWithImpl<$Res>;
   @useResult
   $Res call({List<UserEntity> usersList});
 }
 
 /// @nodoc
-class __$$UserLoadedStateCopyWithImpl<$Res>
-    extends _$UserStateCopyWithImpl<$Res, _$UserLoadedState>
-    implements _$$UserLoadedStateCopyWith<$Res> {
-  __$$UserLoadedStateCopyWithImpl(
-      _$UserLoadedState _value, $Res Function(_$UserLoadedState) _then)
+class __$$UserLoadedStateImplCopyWithImpl<$Res>
+    extends _$UserStateCopyWithImpl<$Res, _$UserLoadedStateImpl>
+    implements _$$UserLoadedStateImplCopyWith<$Res> {
+  __$$UserLoadedStateImplCopyWithImpl(
+      _$UserLoadedStateImpl _value, $Res Function(_$UserLoadedStateImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -480,7 +481,7 @@ class __$$UserLoadedStateCopyWithImpl<$Res>
   $Res call({
     Object? usersList = null,
   }) {
-    return _then(_$UserLoadedState(
+    return _then(_$UserLoadedStateImpl(
       usersList: null == usersList
           ? _value._usersList
           : usersList // ignore: cast_nullable_to_non_nullable
@@ -491,8 +492,8 @@ class __$$UserLoadedStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$UserLoadedState implements UserLoadedState {
-  const _$UserLoadedState({required final List<UserEntity> usersList})
+class _$UserLoadedStateImpl implements UserLoadedState {
+  const _$UserLoadedStateImpl({required final List<UserEntity> usersList})
       : _usersList = usersList;
 
   final List<UserEntity> _usersList;
@@ -509,10 +510,10 @@ class _$UserLoadedState implements UserLoadedState {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$UserLoadedState &&
+            other is _$UserLoadedStateImpl &&
             const DeepCollectionEquality()
                 .equals(other._usersList, _usersList));
   }
@@ -524,8 +525,9 @@ class _$UserLoadedState implements UserLoadedState {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$UserLoadedStateCopyWith<_$UserLoadedState> get copyWith =>
-      __$$UserLoadedStateCopyWithImpl<_$UserLoadedState>(this, _$identity);
+  _$$UserLoadedStateImplCopyWith<_$UserLoadedStateImpl> get copyWith =>
+      __$$UserLoadedStateImplCopyWithImpl<_$UserLoadedStateImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -604,10 +606,10 @@ class _$UserLoadedState implements UserLoadedState {
 
 abstract class UserLoadedState implements UserState {
   const factory UserLoadedState({required final List<UserEntity> usersList}) =
-      _$UserLoadedState;
+      _$UserLoadedStateImpl;
 
   List<UserEntity> get usersList;
   @JsonKey(ignore: true)
-  _$$UserLoadedStateCopyWith<_$UserLoadedState> get copyWith =>
+  _$$UserLoadedStateImplCopyWith<_$UserLoadedStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

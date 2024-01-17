@@ -74,25 +74,25 @@ class _$UserEventCopyWithImpl<$Res, $Val extends UserEvent>
 }
 
 /// @nodoc
-abstract class _$$UserFetchEventDataCopyWith<$Res> {
-  factory _$$UserFetchEventDataCopyWith(_$UserFetchEventData value,
-          $Res Function(_$UserFetchEventData) then) =
-      __$$UserFetchEventDataCopyWithImpl<$Res>;
+abstract class _$$UserFetchEventDataImplCopyWith<$Res> {
+  factory _$$UserFetchEventDataImplCopyWith(_$UserFetchEventDataImpl value,
+          $Res Function(_$UserFetchEventDataImpl) then) =
+      __$$UserFetchEventDataImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$UserFetchEventDataCopyWithImpl<$Res>
-    extends _$UserEventCopyWithImpl<$Res, _$UserFetchEventData>
-    implements _$$UserFetchEventDataCopyWith<$Res> {
-  __$$UserFetchEventDataCopyWithImpl(
-      _$UserFetchEventData _value, $Res Function(_$UserFetchEventData) _then)
+class __$$UserFetchEventDataImplCopyWithImpl<$Res>
+    extends _$UserEventCopyWithImpl<$Res, _$UserFetchEventDataImpl>
+    implements _$$UserFetchEventDataImplCopyWith<$Res> {
+  __$$UserFetchEventDataImplCopyWithImpl(_$UserFetchEventDataImpl _value,
+      $Res Function(_$UserFetchEventDataImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$UserFetchEventData implements UserFetchEventData {
-  const _$UserFetchEventData();
+class _$UserFetchEventDataImpl implements UserFetchEventData {
+  const _$UserFetchEventDataImpl();
 
   @override
   String toString() {
@@ -100,9 +100,9 @@ class _$UserFetchEventData implements UserFetchEventData {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$UserFetchEventData);
+        (other.runtimeType == runtimeType && other is _$UserFetchEventDataImpl);
   }
 
   @override
@@ -172,29 +172,31 @@ class _$UserFetchEventData implements UserFetchEventData {
 }
 
 abstract class UserFetchEventData implements UserEvent {
-  const factory UserFetchEventData() = _$UserFetchEventData;
+  const factory UserFetchEventData() = _$UserFetchEventDataImpl;
 }
 
 /// @nodoc
-abstract class _$$UserOnPressedEventDataCopyWith<$Res> {
-  factory _$$UserOnPressedEventDataCopyWith(_$UserOnPressedEventData value,
-          $Res Function(_$UserOnPressedEventData) then) =
-      __$$UserOnPressedEventDataCopyWithImpl<$Res>;
+abstract class _$$UserOnPressedEventDataImplCopyWith<$Res> {
+  factory _$$UserOnPressedEventDataImplCopyWith(
+          _$UserOnPressedEventDataImpl value,
+          $Res Function(_$UserOnPressedEventDataImpl) then) =
+      __$$UserOnPressedEventDataImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$UserOnPressedEventDataCopyWithImpl<$Res>
-    extends _$UserEventCopyWithImpl<$Res, _$UserOnPressedEventData>
-    implements _$$UserOnPressedEventDataCopyWith<$Res> {
-  __$$UserOnPressedEventDataCopyWithImpl(_$UserOnPressedEventData _value,
-      $Res Function(_$UserOnPressedEventData) _then)
+class __$$UserOnPressedEventDataImplCopyWithImpl<$Res>
+    extends _$UserEventCopyWithImpl<$Res, _$UserOnPressedEventDataImpl>
+    implements _$$UserOnPressedEventDataImplCopyWith<$Res> {
+  __$$UserOnPressedEventDataImplCopyWithImpl(
+      _$UserOnPressedEventDataImpl _value,
+      $Res Function(_$UserOnPressedEventDataImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$UserOnPressedEventData implements UserOnPressedEventData {
-  const _$UserOnPressedEventData();
+class _$UserOnPressedEventDataImpl implements UserOnPressedEventData {
+  const _$UserOnPressedEventDataImpl();
 
   @override
   String toString() {
@@ -202,9 +204,10 @@ class _$UserOnPressedEventData implements UserOnPressedEventData {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$UserOnPressedEventData);
+        (other.runtimeType == runtimeType &&
+            other is _$UserOnPressedEventDataImpl);
   }
 
   @override
@@ -274,5 +277,5 @@ class _$UserOnPressedEventData implements UserOnPressedEventData {
 }
 
 abstract class UserOnPressedEventData implements UserEvent {
-  const factory UserOnPressedEventData() = _$UserOnPressedEventData;
+  const factory UserOnPressedEventData() = _$UserOnPressedEventDataImpl;
 }

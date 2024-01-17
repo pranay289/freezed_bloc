@@ -50,10 +50,12 @@ dependencies:
   animated_text_kit: ^4.2.2
   bloc_test: ^9.1.4
   mockito: ^5.4.0
+  injectable: ^2.3.2
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  injectable_generator:  
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
